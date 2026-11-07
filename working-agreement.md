@@ -53,6 +53,10 @@ Before the user approves, the team may read files and run existing code or tests
 
 At the approval gate, stop and wait for the user. Do not continue the playbook in the same response.
 
+### Changing the Plan
+
+If a participant won't or can't do part of the approved plan, stop before making further changes. Tell the user what would change and why, and wait for their decision. Implementation details that don't change what the plan delivers don't need approval.
+
 ### Failed Review
 
 If Rita reports a Critical or Major finding, stop before Teo's verification and let the user decide what happens next. Do not fix the finding without approval. Minor findings and Nitpicks do not stop the workflow.
