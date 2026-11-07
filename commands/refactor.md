@@ -1,6 +1,7 @@
 ---
 description: Run the refactoring workflow
 disable-model-invocation: true
+allowed-tools: Read(/${CLAUDE_PLUGIN_ROOT}/**)
 ---
 
 Load:

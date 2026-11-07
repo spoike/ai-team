@@ -1,6 +1,7 @@
 ---
 description: Let Tina decide who should handle a task
 disable-model-invocation: true
+allowed-tools: Read(/${CLAUDE_PLUGIN_ROOT}/**)
 ---
 
 Load:

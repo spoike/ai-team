@@ -141,7 +141,7 @@ To change the personas or playbooks themselves, fork this repository. A fork is 
 
 ## How it works
 
-Each command is a short markdown prompt that tells Claude which files to load (persona, standards, working agreement) and to act as that persona. The commands reference those files through `${CLAUDE_PLUGIN_ROOT}`, which Claude Code replaces with the plugin's install location, so they work from any project.
+Each command is a short markdown prompt that tells Claude which files to load (persona, standards, working agreement) and to act as that persona. The commands reference those files through `${CLAUDE_PLUGIN_ROOT}`, which Claude Code replaces with the plugin's install location, so they work from any project. Each command is allowed to read the plugin's own files, so you are not asked for permission to load them.
 
 ## Feedback
 

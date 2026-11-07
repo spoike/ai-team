@@ -1,6 +1,7 @@
 ---
 description: Consult Uma, the UX Designer
 disable-model-invocation: true
+allowed-tools: Read(/${CLAUDE_PLUGIN_ROOT}/**)
 ---
 
 Load and follow:

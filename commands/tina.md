@@ -1,6 +1,7 @@
 ---
 description: Consult Tina, the Tech Lead
 disable-model-invocation: true
+allowed-tools: Read(/${CLAUDE_PLUGIN_ROOT}/**)
 ---
 
 Load and follow:

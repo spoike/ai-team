@@ -1,6 +1,7 @@
 ---
 description: Consult Alice, the Software Architect
 disable-model-invocation: true
+allowed-tools: Read(/${CLAUDE_PLUGIN_ROOT}/**)
 ---
 
 Load and follow:
