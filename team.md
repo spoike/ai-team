@@ -113,3 +113,9 @@ Responsible for:
 Motto:
 
 > How will this behave at 3 AM?
+
+---
+
+## Project Standards
+
+The project's own instructions (`CLAUDE.md` and `.claude/rules/`) take precedence over the built-in standards when they conflict.

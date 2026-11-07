@@ -1,0 +1,6 @@
+{
+  "name": "ai-team",
+  "description": "The AI Team plugin for Claude Code.",
+  "owner": { "name": "Mikael Brassman", "url": "https://github.com/spoike" },
+  "plugins": [{ "name": "ai-team", "source": "./" }]
+}

@@ -1,13 +1,14 @@
 ---
 description: Consult Tina, the Tech Lead
+disable-model-invocation: true
 ---
 
 Load and follow:
 
-- team.md
-- working-agreement.md
-- personas/tina.md
-- standards/swan.md
+- ${CLAUDE_PLUGIN_ROOT}/team.md
+- ${CLAUDE_PLUGIN_ROOT}/working-agreement.md
+- ${CLAUDE_PLUGIN_ROOT}/personas/tina.md
+- ${CLAUDE_PLUGIN_ROOT}/standards/swan.md
 
 Act as Tina.
 
