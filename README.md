@@ -1,18 +1,20 @@
 # AI Team
 
-A team of AI software professionals who collaborate to design, build, review, test, and operate software through reusable personas, standards, and playbooks. It runs on [Claude Code](https://claude.com/claude-code) as a set of slash commands.
+A team of AI software professionals who collaborate to design, build, review, test, and operate software through reusable personas, standards, and playbooks. It runs on [Claude Code](https://claude.com/claude-code) as a plugin.
+
+Forked from [JohanO/ai-team](https://github.com/JohanO/ai-team).
 
 ## Team
 
 | Command | Name | Role | Ask them to... |
 | --- | --- | --- | --- |
-| `/tina` | Tina | Tech Lead | break down a task, decide who should be involved, define success criteria |
-| `/alice` | Alice | Architect | evaluate architecture, dependencies, scalability, design options |
-| `/uma` | Uma | UX Designer | define user flows, interaction design, accessibility |
-| `/bob` | Bob | Software Engineer | plan and implement code changes |
-| `/rita` | Rita | Code Reviewer | review code for quality, security, maintainability |
-| `/teo` | Teo | QA Engineer | define test strategy, edge cases, regression risks |
-| `/dave` | Dave | DevOps Engineer | assess deployment, infrastructure, monitoring, reliability |
+| `/ai-team:tina` | Tina | Tech Lead | break down a task, decide who should be involved, define success criteria |
+| `/ai-team:alice` | Alice | Architect | evaluate architecture, dependencies, scalability, design options |
+| `/ai-team:uma` | Uma | UX Designer | define user flows, interaction design, accessibility |
+| `/ai-team:bob` | Bob | Software Engineer | plan and implement code changes |
+| `/ai-team:rita` | Rita | Code Reviewer | review code for quality, security, maintainability |
+| `/ai-team:teo` | Teo | QA Engineer | define test strategy, edge cases, regression risks |
+| `/ai-team:dave` | Dave | DevOps Engineer | assess deployment, infrastructure, monitoring, reliability |
 
 ![The AI Team: Tina, Alice, Uma, Bob, Rita, Teo and Dave](docs/ai-team.png)
 
@@ -31,56 +33,50 @@ Each team member has a defined role, responsibilities, priorities, and output fo
 
 ### Prerequisites
 
-- [Claude Code](https://claude.com/claude-code) (CLI, desktop app, or IDE extension)
+- [Claude Code](https://claude.com/claude-code) (CLI, desktop app, or IDE extension) version 2.1.275 or later
 - Git
-- On Windows: PowerShell. On macOS/Linux: bash.
+
+Windows has not been tested yet. Please [open an issue](https://github.com/spoike/ai-team/issues) if something fails there.
 
 ### Install
 
-The personas are Claude Code [custom slash commands](https://docs.claude.com/en/docs/claude-code/slash-commands). Installing copies them to `~/.claude/commands` so they are available in **every** project you open with Claude Code.
+In Claude Code, run:
 
-1. Clone the repository somewhere permanent. The installed commands point back to this folder, so don't move or delete it afterwards.
+```
+/plugin install ai-team --marketplace spoike/ai-team
+```
 
-   ```bash
-   git clone https://github.com/JohanO/ai-team.git
-   cd ai-team
-   ```
-
-2. Run the installer for your OS.
-
-   Windows (PowerShell):
-
-   ```powershell
-   .\install-commands.ps1
-   ```
-
-   macOS / Linux:
-
-   ```bash
-   ./install-commands.sh
-   ```
-
-   You should see one `Installed /<name>` line per command (12 in total).
-
-3. Restart Claude Code (or start a new session) so it picks up the new commands. Type `/` and you should see `/tina`, `/alice`, `/feature` and the rest in the list.
-
-To install somewhere other than `~/.claude/commands`, pass a destination: `.\install-commands.ps1 -Destination <path>` or `./install-commands.sh <path>`.
+Type `/ai-team:` and you should see all 12 commands in the list.
 
 ### Update
 
+Third-party marketplaces do not update automatically. To turn that on, open `/plugin`, go to **Marketplaces**, and choose **Enable auto-update**. To update by hand:
+
 ```bash
-git pull
+claude plugin marketplace update ai-team
+claude plugin update ai-team@ai-team
 ```
 
-Then re-run the installer. Re-run it as well if you edit a command in `.claude/commands/`, or if you moved the repository.
+Then run `/reload-plugins` or start a new session.
 
 ### Uninstall
 
-Delete the installed files from `~/.claude/commands`: `alice.md`, `bob.md`, `dave.md`, `rita.md`, `teo.md`, `tina.md`, `uma.md`, `team.md`, `bug.md`, `feature.md`, `refactor.md`, `release.md`.
+```bash
+claude plugin uninstall ai-team@ai-team
+claude plugin marketplace remove ai-team
+```
+
+### Migrating from the install scripts
+
+The install scripts have been removed. If you used them, delete the old copies from `~/.claude/commands`: `alice.md`, `bob.md`, `dave.md`, `rita.md`, `teo.md`, `tina.md`, `uma.md`, `team.md`, `bug.md`, `feature.md`, `refactor.md`, `release.md`. You can then delete your clone. Commands now carry the plugin prefix, so `/alice` becomes `/ai-team:alice`.
 
 ### Try it without installing
 
-Open Claude Code **inside this repository**. The same commands are available there directly, namespaced as `/people:alice`, `/workflows:feature`, and so on, with no installation needed.
+Clone this repository and start Claude Code with the plugin loaded for that session:
+
+```bash
+claude --plugin-dir ./ai-team
+```
 
 ## Using the team
 
@@ -89,9 +85,9 @@ Work in your own project as usual and call on team members when you need them. D
 ### Consult one person
 
 ```
-/alice Should we put the notification service behind a queue or call it synchronously?
-/rita Review the changes on this branch
-/teo What edge cases are we missing in the checkout form?
+/ai-team:alice Should we put the notification service behind a queue or call it synchronously?
+/ai-team:rita Review the changes on this branch
+/ai-team:teo What edge cases are we missing in the checkout form?
 ```
 
 Each persona answers from their own perspective, in their own output format, and stays in character. Rita, for example, classifies findings as Critical, Major, Minor, or Nitpick.
@@ -99,10 +95,10 @@ Each persona answers from their own perspective, in their own output format, and
 ### Not sure who to ask? Ask Tina
 
 ```
-/team We need to add CSV export to the reports page
+/ai-team:team We need to add CSV export to the reports page
 ```
 
-Tina does not do the work. She tells you who is required, who is optional, the order to engage them, the risks, and the success criteria. Then you call those people yourself. `/tina` does the same but stays in character in a longer conversation.
+Tina does not do the work. She tells you who is required, who is optional, the order to engage them, the risks, and the success criteria. Then you call those people yourself. `/ai-team:tina` does the same but stays in character in a longer conversation.
 
 ### Run a whole workflow
 
@@ -110,14 +106,14 @@ Workflows walk several team members through a playbook, with each one building o
 
 | Command | Use it for | Sequence |
 | --- | --- | --- |
-| `/feature` | A new feature | Tina, Alice, Uma, Bob, Rita, Teo, Dave |
-| `/bug` | Investigating and fixing a bug | Teo, Alice, Bob, Rita, Teo, Dave |
-| `/refactor` | Improving maintainability without changing behavior | Alice, Bob, Rita, Teo |
-| `/release` | Safely deploying to production | Dave, Teo, Tina |
+| `/ai-team:feature` | A new feature | Tina, Alice, Uma, Bob, Rita, Teo, Dave |
+| `/ai-team:bug` | Investigating and fixing a bug | Teo, Alice, Bob, Rita, Teo, Dave |
+| `/ai-team:refactor` | Improving maintainability without changing behavior | Alice, Bob, Rita, Teo |
+| `/ai-team:release` | Safely deploying to production | Dave, Teo, Tina |
 
 ```
-/feature Users should be able to export any report as CSV
-/bug Login fails with a blank page after the session times out
+/ai-team:feature Users should be able to export any report as CSV
+/ai-team:bug Login fails with a blank page after the session times out
 ```
 
 Only the participants relevant to the task are included.
@@ -127,24 +123,30 @@ Only the participants relevant to the task are included.
 - Be specific. Include the goal, constraints, and anything already decided.
 - The team makes recommendations, not decisions. You stay responsible for the outcome.
 - When specialists disagree, the [working agreement](working-agreement.md) says whose recommendation carries weight in each area, with Tina deciding cross-functional tradeoffs.
-- Personas read the standards in `standards/` (coding, architecture, UX, accessibility, testing, SWAN). Edit those to match your team's conventions.
+- Commands run only when you type them. Claude will not call on a team member by itself.
+
+## Using your own standards
+
+Personas read the built-in standards in `standards/` (coding, architecture, UX, accessibility, testing, SWAN). Plugin files are replaced on update, so don't edit them. Put your conventions in your project's `CLAUDE.md` or `.claude/rules/` instead. Claude Code loads those in every session, and they take precedence when they conflict with the built-in standards.
+
+To change the personas or playbooks themselves, fork this repository. A fork is its own marketplace, so you can install from it the same way.
 
 ## Repository structure
 
 - `personas/` Individual team members
 - `standards/` Shared engineering standards
 - `playbooks/` Repeatable workflows
-- `.claude/commands/` Command templates (`people/`, `workflows/`, `team.md`)
-- `install-commands.ps1`, `install-commands.sh` Install the commands globally
+- `commands/` The slash commands
+- `.claude-plugin/` Plugin and marketplace manifests
 - `team.md`, `working-agreement.md`, `team-charter.md` Roster, collaboration rules, and charter
 
 ## How it works
 
-Each command is a short markdown prompt that tells Claude which files to load (persona, standards, working agreement) and to act as that persona. The files in `.claude/commands/` reference them by relative path, which only resolves inside this repository. The installer flattens the commands into `~/.claude/commands` and rewrites those references to absolute paths into your clone, so they work from any project.
+Each command is a short markdown prompt that tells Claude which files to load (persona, standards, working agreement) and to act as that persona. The commands reference those files through `${CLAUDE_PLUGIN_ROOT}`, which Claude Code replaces with the plugin's install location, so they work from any project. Each command is allowed to read the plugin's own files, so you are not asked for permission to load them.
 
 ## Feedback
 
-This project is in early testing and feedback is very welcome. Please [open an issue](https://github.com/JohanO/ai-team/issues) or contact the maintainer. Useful things to tell us:
+This project is in early testing and feedback is very welcome. Please [open an issue](https://github.com/spoike/ai-team/issues) or contact the maintainer. Useful things to tell us:
 
 - Which command you used and the prompt you gave it
 - Whether the answer was helpful, too long, off-role, or out of character

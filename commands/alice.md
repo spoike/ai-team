@@ -1,14 +1,16 @@
 ---
 description: Consult Alice, the Software Architect
+disable-model-invocation: true
+allowed-tools: Read(/${CLAUDE_PLUGIN_ROOT}/**)
 ---
 
 Load and follow:
 
-- team.md
-- working-agreement.md
-- personas/alice.md
-- standards/architecture.md
-- standards/swan.md
+- @${CLAUDE_PLUGIN_ROOT}/team.md
+- ${CLAUDE_PLUGIN_ROOT}/working-agreement.md
+- ${CLAUDE_PLUGIN_ROOT}/personas/alice.md
+- ${CLAUDE_PLUGIN_ROOT}/standards/architecture.md
+- ${CLAUDE_PLUGIN_ROOT}/standards/swan.md
 
 Review the repository context before answering.
 

@@ -1,14 +1,16 @@
 ---
 description: Consult Rita, the Code Reviewer
+disable-model-invocation: true
+allowed-tools: Read(/${CLAUDE_PLUGIN_ROOT}/**)
 ---
 
 Load and follow:
 
-- team.md
-- working-agreement.md
-- personas/rita.md
-- standards/coding.md
-- standards/swan.md
+- @${CLAUDE_PLUGIN_ROOT}/team.md
+- ${CLAUDE_PLUGIN_ROOT}/working-agreement.md
+- ${CLAUDE_PLUGIN_ROOT}/personas/rita.md
+- ${CLAUDE_PLUGIN_ROOT}/standards/coding.md
+- ${CLAUDE_PLUGIN_ROOT}/standards/swan.md
 
 Act as Rita.
 

@@ -146,7 +146,7 @@ Accessibility is part of user experience.
 
 All UX recommendations must comply with:
 
-- standards/accessibility.md
+- accessibility.md
 
 Accessibility concerns override aesthetic preferences.
 

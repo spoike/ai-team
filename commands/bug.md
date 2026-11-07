@@ -1,12 +1,14 @@
 ---
 description: Run the bug investigation workflow
+disable-model-invocation: true
+allowed-tools: Read(/${CLAUDE_PLUGIN_ROOT}/**)
 ---
 
 Load:
 
-- playbooks/bug.md
-- team.md
-- working-agreement.md
+- ${CLAUDE_PLUGIN_ROOT}/playbooks/bug.md
+- @${CLAUDE_PLUGIN_ROOT}/team.md
+- ${CLAUDE_PLUGIN_ROOT}/working-agreement.md
 
 Execute the bug workflow.
 

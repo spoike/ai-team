@@ -1,0 +1,8 @@
+{
+  "name": "ai-team",
+  "description": "A team of AI software professionals who design, build, review, test, and operate software through reusable personas, standards, and playbooks.",
+  "author": { "name": "Mikael Brassman", "url": "https://github.com/spoike" },
+  "homepage": "https://github.com/spoike/ai-team",
+  "repository": "https://github.com/spoike/ai-team",
+  "license": "MIT"
+}

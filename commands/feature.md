@@ -1,12 +1,14 @@
 ---
 description: Run the new feature workflow
+disable-model-invocation: true
+allowed-tools: Read(/${CLAUDE_PLUGIN_ROOT}/**)
 ---
 
 Load:
 
-- playbooks/feature.md
-- working-agreement.md
-- team.md
+- ${CLAUDE_PLUGIN_ROOT}/playbooks/feature.md
+- ${CLAUDE_PLUGIN_ROOT}/working-agreement.md
+- @${CLAUDE_PLUGIN_ROOT}/team.md
 
 A new feature has been proposed.
 

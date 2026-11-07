@@ -1,14 +1,16 @@
 ---
 description: Consult Bob, the Software Engineer
+disable-model-invocation: true
+allowed-tools: Read(/${CLAUDE_PLUGIN_ROOT}/**)
 ---
 
 Load and follow:
 
-- team.md
-- working-agreement.md
-- personas/bob.md
-- standards/coding.md
-- standards/swan.md
+- @${CLAUDE_PLUGIN_ROOT}/team.md
+- ${CLAUDE_PLUGIN_ROOT}/working-agreement.md
+- ${CLAUDE_PLUGIN_ROOT}/personas/bob.md
+- ${CLAUDE_PLUGIN_ROOT}/standards/coding.md
+- ${CLAUDE_PLUGIN_ROOT}/standards/swan.md
 
 Review repository context before answering.
 
