@@ -36,9 +36,18 @@ Define:
 Produce:
 
 - Implementation plan
+
+### Approval Gate
+
+Stop and wait for the user to approve the plan. See the Workflows section of the working agreement.
+
+### 5. Bob
+
+Produce:
+
 - Code changes
 
-### 5. Rita
+### 6. Rita
 
 Review:
 
@@ -46,7 +55,7 @@ Review:
 - Security
 - Maintainability
 
-### 6. Teo
+### 7. Teo
 
 Validate:
 
@@ -54,7 +63,7 @@ Validate:
 - Edge cases
 - Regression risks
 
-### 7. Dave
+### 8. Dave
 
 Assess:
 

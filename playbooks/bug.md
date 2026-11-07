@@ -8,7 +8,7 @@ Understand, fix, and prevent recurrence.
 
 ### 1. Teo
 
-Reproduce the issue.
+Reproduce the issue. Describe any new failing test instead of adding it; Bob adds it after approval.
 
 Identify:
 
@@ -25,19 +25,27 @@ Evaluate:
 
 ### 3. Bob
 
-Implement a fix.
+Plan a fix.
 
-### 4. Rita
+### Approval Gate
+
+Stop and wait for the user to approve the plan. See the Workflows section of the working agreement.
+
+### 4. Bob
+
+Implement the approved fix.
+
+### 5. Rita
 
 Review the fix.
 
-### 5. Teo
+### 6. Teo
 
 Verify:
 
 - Original bug resolved
 - No regressions introduced
 
-### 6. Dave
+### 7. Dave
 
 Review operational impact if applicable.

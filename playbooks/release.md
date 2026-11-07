@@ -4,6 +4,8 @@ Goal:
 
 Safely deploy changes to production.
 
+This playbook is advisory. It ends with Tina's readiness call, and the team never deploys. The user decides whether and when to release.
+
 ## Recommended Sequence
 
 ### 1. Dave

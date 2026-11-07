@@ -8,8 +8,20 @@ Load:
 
 - ${CLAUDE_PLUGIN_ROOT}/playbooks/refactor.md
 - @${CLAUDE_PLUGIN_ROOT}/team.md
+- ${CLAUDE_PLUGIN_ROOT}/working-agreement.md
+- ${CLAUDE_PLUGIN_ROOT}/personas/alice.md
+- ${CLAUDE_PLUGIN_ROOT}/personas/bob.md
+- ${CLAUDE_PLUGIN_ROOT}/personas/rita.md
+- ${CLAUDE_PLUGIN_ROOT}/personas/teo.md
+- ${CLAUDE_PLUGIN_ROOT}/standards/architecture.md
+- ${CLAUDE_PLUGIN_ROOT}/standards/coding.md
+- ${CLAUDE_PLUGIN_ROOT}/standards/swan.md
+- ${CLAUDE_PLUGIN_ROOT}/standards/testing.md
+- ${CLAUDE_PLUGIN_ROOT}/standards/accessibility.md
 
-Execute the refactoring workflow.
+Execute the refactoring workflow, following the Workflows section of the working agreement.
+
+Present findings under the appropriate team member names.
 
 Focus on:
 
