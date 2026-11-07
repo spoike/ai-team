@@ -106,10 +106,10 @@ Workflows walk several team members through a playbook, with each one building o
 
 | Command | Use it for | Sequence |
 | --- | --- | --- |
-| `/ai-team:feature` | A new feature | Tina, Alice, Uma, Bob, Rita, Teo, Dave |
-| `/ai-team:bug` | Investigating and fixing a bug | Teo, Alice, Bob, Rita, Teo, Dave |
-| `/ai-team:refactor` | Improving maintainability without changing behavior | Alice, Bob, Rita, Teo |
-| `/ai-team:release` | Safely deploying to production | Dave, Teo, Tina |
+| `/ai-team:feature` | A new feature | Tina, Alice, Uma, Bob (plan), your approval, Bob (build), Rita, Teo, Dave |
+| `/ai-team:bug` | Investigating and fixing a bug | Teo, Alice, Bob (plan), your approval, Bob (fix), Rita, Teo, Dave |
+| `/ai-team:refactor` | Improving maintainability without changing behavior | Alice, Bob (plan), your approval, Bob (build), Rita, Teo |
+| `/ai-team:release` | Checking whether a release is ready (advisory, never deploys) | Dave, Teo, Tina |
 
 ```
 /ai-team:feature Users should be able to export any report as CSV
@@ -117,6 +117,13 @@ Workflows walk several team members through a playbook, with each one building o
 ```
 
 Only the participants relevant to the task are included.
+
+Workflows keep you in control:
+
+- **Approval:** `feature`, `bug`, and `refactor` stop after Bob's plan. Until you approve, the team can read files and run existing code or tests, but changes nothing.
+- **Failed reviews:** if Rita reports a Critical or Major finding, the workflow stops before Teo's verification and you decide what happens next.
+- **Git:** workflows never commit or push unless you ask.
+- **Releases:** `release` is advisory. It ends with Tina's readiness call, and you do the deploying.
 
 ### Tips
 

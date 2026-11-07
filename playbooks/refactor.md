@@ -16,12 +16,20 @@ Evaluate:
 
 ### 2. Bob
 
-Implement refactoring.
+Plan the refactoring.
 
-### 3. Rita
+### Approval Gate
+
+Stop and wait for the user to approve the plan. See the Workflows section of the working agreement.
+
+### 3. Bob
+
+Implement the approved refactoring.
+
+### 4. Rita
 
 Review maintainability improvements.
 
-### 4. Teo
+### 5. Teo
 
 Verify unchanged behavior.
