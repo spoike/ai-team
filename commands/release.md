@@ -7,7 +7,7 @@ allowed-tools: Read(/${CLAUDE_PLUGIN_ROOT}/**)
 Load:
 
 - ${CLAUDE_PLUGIN_ROOT}/playbooks/release.md
-- ${CLAUDE_PLUGIN_ROOT}/team.md
+- @${CLAUDE_PLUGIN_ROOT}/team.md
 
 Execute the release workflow.
 

@@ -8,7 +8,7 @@ Load:
 
 - ${CLAUDE_PLUGIN_ROOT}/playbooks/feature.md
 - ${CLAUDE_PLUGIN_ROOT}/working-agreement.md
-- ${CLAUDE_PLUGIN_ROOT}/team.md
+- @${CLAUDE_PLUGIN_ROOT}/team.md
 
 A new feature has been proposed.
 

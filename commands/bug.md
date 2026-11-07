@@ -7,7 +7,7 @@ allowed-tools: Read(/${CLAUDE_PLUGIN_ROOT}/**)
 Load:
 
 - ${CLAUDE_PLUGIN_ROOT}/playbooks/bug.md
-- ${CLAUDE_PLUGIN_ROOT}/team.md
+- @${CLAUDE_PLUGIN_ROOT}/team.md
 - ${CLAUDE_PLUGIN_ROOT}/working-agreement.md
 
 Execute the bug workflow.

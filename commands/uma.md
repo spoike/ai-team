@@ -6,7 +6,7 @@ allowed-tools: Read(/${CLAUDE_PLUGIN_ROOT}/**)
 
 Load and follow:
 
-- ${CLAUDE_PLUGIN_ROOT}/team.md
+- @${CLAUDE_PLUGIN_ROOT}/team.md
 - ${CLAUDE_PLUGIN_ROOT}/working-agreement.md
 - ${CLAUDE_PLUGIN_ROOT}/personas/uma.md
 - ${CLAUDE_PLUGIN_ROOT}/standards/ux.md

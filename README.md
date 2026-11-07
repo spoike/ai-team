@@ -63,6 +63,7 @@ Then run `/reload-plugins` or start a new session.
 
 ```bash
 claude plugin uninstall ai-team@ai-team
+claude plugin marketplace remove ai-team
 ```
 
 ### Migrating from the install scripts
