@@ -66,6 +66,8 @@ claude plugin uninstall ai-team@ai-team
 claude plugin marketplace remove ai-team
 ```
 
+`/plugin uninstall` inside Claude Code can remove the marketplace as well. If it reports that, skip the second command.
+
 ### Migrating from the install scripts
 
 The install scripts have been removed. If you used them, delete the old copies from `~/.claude/commands`: `alice.md`, `bob.md`, `dave.md`, `rita.md`, `teo.md`, `tina.md`, `uma.md`, `team.md`, `bug.md`, `feature.md`, `refactor.md`, `release.md`. You can then delete your clone. Commands now carry the plugin prefix, so `/alice` becomes `/ai-team:alice`.
@@ -121,6 +123,7 @@ Only the participants relevant to the task are included.
 Workflows keep you in control:
 
 - **Approval:** `feature`, `bug`, and `refactor` stop after Bob's plan. Until you approve, the team can read files and run existing code or tests, but changes nothing.
+- **Plan changes:** if Bob won't or can't do part of the approved plan, the workflow stops and asks you before going further.
 - **Failed reviews:** if Rita reports a Critical or Major finding, the workflow stops before Teo's verification and you decide what happens next.
 - **Git:** workflows never commit or push unless you ask.
 - **Releases:** `release` is advisory. It ends with Tina's readiness call, and you do the deploying.
